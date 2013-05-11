@@ -1,9 +1,9 @@
 PredTest: A Simple Classifier Test Framework for R
-==================================================
+--------------------------------------------------
 
 
-Overview
---------
+### Overview
+
 
 This is a simple classifier test framework for R that I created while
 experimenting with solutions to Kaggle's [Titanic challenge](http://www.kaggle.com/c/titanic-gettingStarted).  
@@ -14,8 +14,8 @@ reused this framework for other classification projects and it's been handy.
 There are very good, robust R packages that do similar things. This is
 just a simple tool to facilitate experimenting with classifiers.
 
-Usage
------
+### Usage
+
 
 The framework code is in `src/predtest.R`. To load it, source
 the file in your R environment or script.
@@ -154,8 +154,7 @@ example results in,
     3   Naive Bayes 25  0 50  0   1   0       0      1         1
     4   Naive Bayes 25  0 50  0   1   0       0      1         1
 
-Examples
---------
+### Examples
 
 Two example uses of the framework are provided. 
 
