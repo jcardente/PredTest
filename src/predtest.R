@@ -105,10 +105,7 @@ pt.kfold <- function(data, model) {
 # ------------------------------------------------------------
 # MAIN TEST ROUTINE
 
-pt.test.models <- function (data,
-                            models,
-                            completeOnly=TRUE, balanced=TRUE, kfolds=10) {
-
+pt.test.models <- function (data, models) {
 
   # The models argument is a list of lists with the following elements:
   #
@@ -145,9 +142,7 @@ pt.test.models <- function (data,
     
     # Extract the columns this model cares about
     data.model <- data[,c(dep.col, indep.cols)]
-    if (completeOnly) {
-      data.model <- data.model[complete.cases(data.model),]
-    }
+    data.model <- data.model[complete.cases(data.model),]
 
     # Keep only the depedent variable levels of interest
     model.levels <- c(good.levels, bad.levels)
