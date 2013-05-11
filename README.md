@@ -20,7 +20,7 @@ just a simple tool to facilitate experimenting with classifiers.
 The framework code is in `src/predtest.R`. To load it, source
 the file in your R environment or script.
 
-  source("src/predtest.R")
+    source("src/predtest.R")
 
 Two things are required to use the framework.
 
@@ -68,16 +68,16 @@ test data set, and process the results to create the `actual` and
 
 A model is described by a list with the following elements,
 
-* name        - Model's name. (String).
-* model.fn    - Name of model function (String).
-* run         - Run model when TRUE (Boolean).
-* avg.results - Average kfold results when TRUE (Boolean).
-* dep.col     - Name of column to classify (String).
-* indep.cols  - Name of columns to use for prediction (String vector).
-* good.levels - Name of "good" levels for classification column (String vector).
-* bad.levels  - Name of "bad" levels for classification column (String vector)
-* balanced    - Enforce equal "good" and "bad" samples when TRUE (Boolean).
-* kfolds      - Number of cross validation folds (Integer). 
+* `name`        - Model's name. (String).
+* `model.fn`    - Name of model function (String).
+* `run`         - Run model when TRUE (Boolean).
+* `avg.results` - Average kfold results when TRUE (Boolean).
+* `dep.col`     - Name of column to classify (String).
+* `indep.cols`  - Name of columns to use for prediction (String vector).
+* `good.levels` - Name of "good" levels for classification column (String vector).
+* `bad.levels`  - Name of "bad" levels for classification column (String vector)
+* `balanced`    - Enforce equal "good" and "bad" samples when TRUE (Boolean).
+* `kfolds`      - Number of cross validation folds (Integer). 
 
 The primary framework entry point, `pt.test.models()`, takes a list of such model lists
 along with the associated data set. This excerpt from the Iris example
@@ -130,16 +130,16 @@ from running the Iris example,
 
 The columns of this data frame are,
 
-* Model - name of the tested model. 
-* tp - number of true positive results. 
-* fp - number of false positive results. 
-* tn - number of true negative results.
-* fn - number of false negative results. 
-* tpr - Proportion of true positives to true positives and false negatives.
-* fpr - Proportion of false positives to false positives and true negatives.
-* errrate - Proportion of incorrect predictions to total number of predictions. 
-* recall - Proportion of true positives to true positives and false negatives. 
-* precision - Proportion of true positives to true positives and false positives.
+* `Model` - name of the tested model. 
+* `tp` - number of true positive results. 
+* `fp` - number of false positive results. 
+* `tn` - number of true negative results.
+* `fn` - number of false negative results. 
+* `tpr` - Proportion of true positives to true positives and false negatives.
+* `fpr` - Proportion of false positives to false positives and true negatives.
+* `errrate` - Proportion of incorrect predictions to total number of predictions. 
+* `recall` - Proportion of true positives to true positives and false negatives. 
+* `precision` - Proportion of true positives to true positives and false positives.
 
 Some of these metrics don't make sense when averaged over the cross
 validation folds. Setting the model parameter `avg.results` to `FALSE`
